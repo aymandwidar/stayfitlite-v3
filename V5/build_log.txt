@@ -1,0 +1,25 @@
+
+> stayfitlite-v2@0.0.0 build
+> vite build
+
+[36mvite v7.2.4 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 118 modules transformed.
+Γ£ù Build failed in 1.03s
+error during build:
+src/services/AIMemory.js (187:46): Expected ',', got 'd'
+file: D:/AI Projects/SatyFit Lite/V2/src/services/AIMemory.js:187:46
+
+185:      * Learn user's preferred training times
+186:      */
+187:     learnTrainingTime(activityType, timePerio d) {
+                                                   ^
+188:         const prefs = this.memory.user_preferences.preferred_training_times;
+189:         if (!prefs[activityType]) {
+
+    at getRollupError (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at ParseError.initialise (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/node-entry.js:14469:28)
+    at convertNode (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/node-entry.js:16352:10)
+    at convertProgram (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/node-entry.js:15592:12)
+    at Module.setSource (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/node-entry.js:17352:24)
+    at async ModuleLoader.addModuleSource (file:///D:/AI%20Projects/SatyFit%20Lite/V2/node_modules/rollup/dist/es/shared/node-entry.js:21377:13)

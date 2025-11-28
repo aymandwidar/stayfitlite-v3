@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Redirect to the base path, preserving the query string and hash
+      var path = window.location.pathname;
+      var base = '/stayfitlite-v3/';
+      if (path.startsWith(base)) {
+        // We are already on the correct base, but maybe a subpath caused 404
+        // Redirect to root
+        window.location.replace(base);
+      } else {
+        // Redirect to base
+        window.location.replace(base);
+      }
+    </script>
+    <meta http-equiv="refresh" content="0;url=/stayfitlite-v3/">
+  </head>
+  <body>
+    Redirecting to home...
+  </body>
+</html>
