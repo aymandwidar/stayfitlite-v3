@@ -182,15 +182,15 @@ export default function AICoach() {
 
                 {/* Input */}
                 <div className="px-4 pb-4">
-                    <div className="glass-card-prominent p-3 rounded-2xl">
-                        <div className="flex gap-2 items-end">
+                    <div className="glass-card-prominent p-4 rounded-2xl">
+                        <div className="flex gap-3 items-end">
                             <div className="flex-1 relative">
                                 <textarea
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyPress={handleKeyPress}
                                     placeholder="Ask me anything..."
-                                    className="w-full px-4 py-3 pr-12 bg-transparent border border-cyan-400/20 rounded-xl text-white placeholder-gray-500 resize-none focus:outline-none focus:border-cyan-400"
+                                    className="w-full px-4 py-3 pr-12 bg-white/5 rounded-xl text-white placeholder-gray-400 resize-none focus:outline-none focus:bg-white/10 transition"
                                     rows={1}
                                     style={{ minHeight: '48px', maxHeight: '120px' }}
                                 />
@@ -209,7 +209,7 @@ export default function AICoach() {
                             <button
                                 onClick={handleSend}
                                 disabled={!input.trim() || isLoading}
-                                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed px-6"
                             >
                                 Send
                             </button>
@@ -220,16 +220,16 @@ export default function AICoach() {
                 {/* Quick Actions */}
                 {messages.length === 1 && (
                     <div className="px-4 pb-3">
-                        <p className="text-xs text-gray-400 mb-2">Quick actions:</p>
-                        <div className="flex gap-2 overflow-x-auto pb-2">
+                        <p className="text-sm font-medium text-gray-300 mb-3">Quick actions:</p>
+                        <div className="grid grid-cols-2 gap-3">
                             {quickActions.map((action, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => handleQuickAction(action)}
-                                    className="flex-shrink-0 px-4 py-2 glass-card rounded-full text-sm text-white hover:border-cyan-400 transition"
+                                    className="glass-card p-4 rounded-xl text-white hover:border-cyan-400 transition flex items-center justify-center gap-2"
                                 >
-                                    <span className="mr-2">{action.emoji}</span>
-                                    {action.text}
+                                    <span className="text-2xl">{action.emoji}</span>
+                                    <span className="text-sm font-medium">{action.text}</span>
                                 </button>
                             ))}
                         </div>
