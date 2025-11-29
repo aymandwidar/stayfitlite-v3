@@ -51,10 +51,7 @@ export default function Dashboard() {
         }}>
             {/* Header */}
             <div className="px-6 pt-8 pb-4">
-                <div className="flex justify-between items-center">
-                    <h1 className="text-4xl font-bold text-white mb-1">Dashboard</h1>
-                    <span className="text-xs bg-red-500 text-white px-2 py-1 rounded">V5.1 DEBUG</span>
-                </div>
+                <h1 className="text-4xl font-bold text-white mb-1">Dashboard</h1>
                 <p className="text-cyan-400 text-sm font-medium">Antigravity | Today</p>
             </div>
 
